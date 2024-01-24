@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: county-search-service
+  main:
+    banner-mode: off
+  profiles:
+    include: db
+    active: local
+
+management:
+  endpoints.web:
+    base-path: /
+    exposure.include: health, info, prometheus
+  health.binder.enabled: true
+  endpoint.health.show-details: always
+
+server:
+  servlet:
+    contextPath: /
